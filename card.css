@@ -1,0 +1,39 @@
+.card-container{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.card{
+  width: 200px;
+  padding: 20px;
+  margin: 20px;
+  
+}
+img{
+  width: 100%;
+  border-radius: 8px;
+}
+.bio{
+  color: #555;
+}
+#leader{
+  border: 3px solid gold;
+  border-radius: 10px;
+}
+
+.card[data-role="dev"]{
+  border: 2px dashed blue;
+  border-radius: 8px;
+
+}
+.card:hover{
+  background-color: antiquewhite;
+  transform: scale(1.05);
+}
+.card h2{
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+p{
+  margin-top: 2px;
+}

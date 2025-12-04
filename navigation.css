@@ -1,0 +1,71 @@
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Navbar Container */
+    nav {
+      background: linear-gradient(to right, #1e3c72, #2a5298);
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Logo */
+    #logo {
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    /* Nav Links */
+    ul {
+      list-style: none;
+      display: flex;
+    }
+    ul li {
+      position: relative; /* important for dropdown */
+      margin: 0 20px;
+    }
+    ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 8px 12px;
+      display: block;
+      transition: 0.3s;
+    }
+    ul li a:hover {
+      background: rgba(255,255,255,0.2);
+      border-radius: 5px;
+    }
+
+    /* Dropdown Menu */
+    ul li .dropdown {
+      display: none; /* hidden by default */
+      position: absolute;
+      top: 100%; /* below parent */
+      left: 0;
+      background: white;
+      min-width: 160px;
+      border-radius: 5px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+    ul li .dropdown a {
+      color: #2a5298;
+      padding: 10px;
+      text-decoration: none;
+      display: block;
+    }
+    ul li .dropdown a:hover {
+      background: #f4f4f4;
+    }
+
+    /* Show dropdown on hover */
+    ul li:hover .dropdown {
+      display: block;
+    }

@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+color: azure;
+}
+header{
+
+    background: url('https://picsum.photos/1200/800') no-repeat center center/cover;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-links{
+
+    display: flex;
+    gap: 20px;
+}
+.logo{
+   font-size: 3em;
+   font-weight: bold;
+
+}
+.nav-links a {
+    text-decoration: none;
+    color: aliceblue;
+    transition: color 0.3s ease;
+}
+.nav-links a:hover{
+    color: blue;
+}
+.hero{
+    text-align: center;
+    margin-bottom: 100px;
+}
+.hero h1{
+ font-size: 3em;
+ margin-bottom: 20px;
+}
+.hero p{
+    margin-bottom: 30px;
+}
+ul {
+  list-style: none;
+}
+.cta-btn{
+    padding: 10px;
+    background-color: aquamarine;
+    border-radius: 10px;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.box{
+    width: 200px;
+    height: 200px;
+    background: blueviolet;
+    margin: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
+}

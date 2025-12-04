@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Working Dropdown Navbar</title>
+  <link rel="stylesheet" href="navigation.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div id="logo">MyBrand</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li>
+        <a href="#services">Services ▾</a>
+        <div class="dropdown">
+          <a href="#web">Web Design</a>
+          <a href="#app">App Development</a>
+          <a href="#seo">SEO</a>
+        </div>
+      </li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Dummy Content -->
+  <section id="home" style="height:600px; background:#eee; text-align:center; padding-top:100px;">
+    <h1>Home Section</h1>
+  </section>
+  <section id="about" style="height:600px; background:#ddd; text-align:center; padding-top:100px;">
+    <h1>About Section</h1>
+  </section>
+  <section id="services" style="height:600px; background:#ccc; text-align:center; padding-top:100px;">
+    <h1>Services Section</h1>
+  </section>
+  <section id="contact" style="height:600px; background:#bbb; text-align:center; padding-top:100px;">
+    <h1>Contact Section</h1>
+  </section>
+
+</body>
+</html>

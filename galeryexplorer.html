@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Galaxy Explorer</title>
+  <link rel="stylesheet" href="galeryexplorer.css">
+</head>
+<body>
+  <header class="hero">
+    <h1>🚀 Galaxy Explorer</h1>
+    <p>Navigate the cosmos. Discover the unknown.</p>
+  </header>
+
+  <section class="tabs">
+    <input type="radio" name="tab" id="planets" checked>
+    <label for="planets">Planets</label>
+
+    <input type="radio" name="tab" id="missions">
+    <label for="missions">Missions</label>
+
+    <input type="radio" name="tab" id="fleet">
+    <label for="fleet">Fleet</label>
+
+    <div class="content planets">
+      <div class="card">🪐 Mars</div>
+      <div class="card">🪐 Europa</div>
+      <div class="card">🪐 Titan</div>
+    </div>
+
+    <div class="content missions">
+      <pre>
+> Mission: Aurora-7
+> Status: Completed
+> Notes: Sample return successful.
+
+> Mission: Helios-X
+> Status: In Progress
+> Notes: Mapping solar winds.
+      </pre>
+    </div>
+
+    <div class="content fleet">
+      <ul>
+        <li>🚀 Starhawk — Explorer Class</li>
+        <li>🚀 Nebula — Cargo Class</li>
+        <li>🚀 Orion — Research Class</li>
+      </ul>
+    </div>
+  </section>
+</body>
+</html>

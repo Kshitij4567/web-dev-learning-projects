@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Blog Website</title>
+  <style>
+    /* Header */
+    #header {
+      background-color: #222;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    #navbar a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+
+    /* Home Section */
+    #home {
+      padding: 60px;
+      background: linear-gradient(to right, #ff9a9e, #fad0c4);
+      text-align: center;
+    }
+
+    /* Blog Section */
+    #blog {
+      padding: 60px;
+      background-color: #f4f4f4;
+    }
+    .blog-card {
+      background: white;
+      padding: 20px;
+      margin: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    /* Gallery Section */
+    #gallery {
+      padding: 60px;
+      background-color: #e0f7fa;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    #gallery img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    /* Contact Section */
+    #contact {
+      padding: 60px;
+      background-color: #d1c4e9;
+    }
+    #contact form {
+      display: flex;
+      flex-direction: column;
+      max-width: 400px;
+      margin: auto;
+    }
+    #contact input, #contact textarea {
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    #contact button {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div id="header">
+    <h1>My Blog Website</h1>
+    <div id="navbar">
+      <a href="#home">Home</a>
+      <a href="#blog">Blog</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+
+  <!-- Home -->
+  <div id="home">
+    <h2>Welcome to My World</h2>
+    <p>This is my personal blog website.</p>
+  </div>
+
+  <!-- Blog -->
+  <div id="blog">
+    <h2>Latest Posts</h2>
+    <div class="blog-card">
+      <h3>Post Title 1</h3>
+      <p>Short description of the post...</p>
+    </div>
+    <div class="blog-card">
+      <h3>Post Title 2</h3>
+      <p>Another description goes here...</p>
+    </div>
+  </div>
+
+  <!-- Gallery -->
+  <div id="gallery">
+    <img src="https://via.placeholder.com/300" alt="Sample 1">
+    <img src="https://via.placeholder.com/300" alt="Sample 2">
+    <img src="https://via.placeholder.com/300" alt="Sample 3">
+  </div>
+
+  <!-- Contact -->
+  <div id="contact">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Your Name">
+      <input type="email" placeholder="Your Email">
+      <textarea placeholder="Your Message"></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+</body>
+</html>

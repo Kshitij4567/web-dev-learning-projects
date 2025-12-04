@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Position Practice</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      height: 2000px; /* scroll ke liye */
+    }
+
+    .container {
+      margin-bottom: 50px;
+      border: 2px dashed #ccc;
+      padding: 20px;
+      position: relative;
+      height: 200px;
+    }
+
+    .box {
+      width: 120px;
+      height: 60px;
+      background: #2a5298;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+    }
+
+    /* 1. Static (default) */
+    .static {
+      position: static;
+    }
+
+    /* 2. Relative */
+    .relative {
+      position: relative;
+      top: 20px;
+      left: 30px;
+    }
+
+    /* 3. Absolute */
+    .absolute {
+      position: absolute;
+      top: 50px;
+      left: 50px;
+    }
+
+    /* 4. Fixed */
+    .fixed {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: crimson;
+    }
+
+    /* 5. Sticky */
+    .sticky {
+      position: sticky;
+      top: 0;
+      background: green;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>CSS Position Practice</h1>
+
+  <div class="container">
+    <div class="box static">Static</div>
+    <p>Static: Default position, apni normal jagah par rehta hai.</p>
+  </div>
+
+  <div class="container">
+    <div class="box relative">Relative</div>
+    <p>Relative: Apni jagah se shift hota hai, lekin space occupy karta hai.</p>
+  </div>
+
+  <div class="container">
+    <div class="box absolute">Absolute</div>
+    <p>Absolute: Parent (relative) ke hisaab se place hota hai.</p>
+  </div>
+
+  <div class="container">
+    <div class="box sticky">Sticky</div>
+    <p>Sticky: Scroll karte waqt top par chipak jaata hai.</p>
+  </div>
+
+  <div class="box fixed">Fixed</div>
+  <p>Fixed: Scroll karne par bhi screen ke corner me chipka rehta hai.</p>
+
+</body>
+</html>
