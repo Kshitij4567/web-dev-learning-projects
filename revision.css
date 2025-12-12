@@ -1,0 +1,16 @@
+body{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h1{
+    font-size: 3rem;
+}
+#colorcode{
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+#changecolorbtn{
+    font-size: 1.4rem;
+    padding: 15px;
+    
+}
