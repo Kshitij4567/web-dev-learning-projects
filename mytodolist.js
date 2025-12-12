@@ -43,7 +43,7 @@ function saveTasks() {
   document.querySelectorAll("#taskList li").forEach(li => {
     tasks.push({
       text: li.querySelector("span").innerText,
-      completed: li.classList.contains("completed")
+      completed: li.classList.contains("completed")  // this line shows task is stored or not
     });
   });
   localStorage.setItem("tasks", JSON.stringify(tasks));

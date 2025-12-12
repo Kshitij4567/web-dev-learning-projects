@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Click Counter</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    #count {
+      font-size: 2em;
+      margin: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 5px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Click Counter App</h1>
+  <div id="count">0</div>
+  <button id="incrementBtn">Click Me</button>
+  <button id="resetBtn">Reset</button>
+
+  <script>
+    let count = 0; // 👈 counter variable
+
+    const countDisplay = document.getElementById("count");
+    const incrementBtn = document.getElementById("incrementBtn");
+    const resetBtn = document.getElementById("resetBtn");
+
+    // Increment button
+    incrementBtn.addEventListener("click", () => {
+      count++;
+      countDisplay.innerText = count; // 👈 DOM update
+    });
+
+    // Reset button
+    resetBtn.addEventListener("click", () => {
+      count = 0;
+      countDisplay.innerText = count; // 👈 DOM update
+    });
+  </script>
+</body>
+</html>
