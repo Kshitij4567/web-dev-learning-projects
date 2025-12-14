@@ -1,16 +1,18 @@
 body{
-    text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 100px;
+    background: #222;
+    color: #00ffcc;
+    text-align: center;
+}
+#clock{
+    font-size: 2rem;
+    padding: 20px;
+    border: 5px solid #00ffcc;
+    border-radius: 12px;
+    display: inline-block;
+    margin-top: 20px;
 }
 h1{
     font-size: 3rem;
-}
-#colorcode{
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-#changecolorbtn{
-    font-size: 1.4rem;
-    padding: 15px;
-    
 }

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Notes App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+      background: #f9f9f9;
+    }
+    h1 {
+      text-align: center;
+    }
+    #noteInput {
+      width: 70%;
+      padding: 8px;
+      font-size: 16px;
+    }
+    #addNoteBtn {
+      padding: 8px 12px;
+      font-size: 16px;
+      margin-left: 5px;
+      cursor: pointer;
+    }
+    #noteList {
+      list-style: none;
+      padding: 0;
+      margin-top: 20px;
+    }
+    .noteItem {
+      margin: 5px 0;
+      padding: 8px;
+      background: #fff;
+      border: 1px solid #ddd;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .deleteBtn {
+      cursor: pointer;
+      color: red;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Notes App</h1>
+  <input id="noteInput" type="text" placeholder="Enter your note">
+  <button id="addNoteBtn">Add Note</button>
+  <ul id="noteList"></ul>
+
+  <script>
+    const noteInput = document.getElementById("noteInput");
+    const addNoteBtn = document.getElementById("addNoteBtn");
+    const noteList = document.getElementById("noteList");
+
+    // Load notes from localStorage on page load
+    window.addEventListener("load", () => {
+      const savedNotes = JSON.parse(localStorage.getItem("notes")) || [];
+      savedNotes.forEach(note => addNoteToDOM(note));
+    });
+
+    // Add note button click
+    addNoteBtn.addEventListener("click", () => {
+      const noteText = noteInput.value.trim();
+      if (noteText === "") return;
+
+      addNoteToDOM(noteText);
+      saveNote(noteText);
+
+      noteInput.value = "";
+    });
+
+    // Function to add note in DOM
+    function addNoteToDOM(noteText) {
+      const li = document.createElement("li");
+      li.classList.add("noteItem");
+      li.innerText = noteText;
+
+      const deleteBtn = document.createElement("span");
+      deleteBtn.innerText = "❌";
+      deleteBtn.classList.add("deleteBtn");
+
+      // Delete note event
+      deleteBtn.addEventListener("click", () => {
+        noteList.removeChild(li);
+        deleteNote(noteText);
+      });
+
+      li.appendChild(deleteBtn);
+      noteList.appendChild(li);
+    }
+
+    // Save note in localStorage
+    function saveNote(noteText) {
+      const notes = JSON.parse(localStorage.getItem("notes")) || [];
+      notes.push(noteText);
+      localStorage.setItem("notes", JSON.stringify(notes));
+    }
+
+    // Delete note from localStorage
+    function deleteNote(noteText) {
+      let notes = JSON.parse(localStorage.getItem("notes")) || [];
+      notes = notes.filter(note => note !== noteText);
+      localStorage.setItem("notes", JSON.stringify(notes));
+    }
+  </script>
+</body>
+</html>
