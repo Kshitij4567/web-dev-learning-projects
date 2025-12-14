@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Expense Tracker</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    #balance { font-size: 20px; margin-bottom: 10px; }
+    ul { list-style: none; padding: 0; }
+    li { margin: 5px 0; padding: 5px; border: 1px solid #ccc; display: flex; justify-content: space-between; }
+    .income { color: green; }
+    .expense { color: red; }
+    .deleteBtn { cursor: pointer; margin-left: 10px; }
+  </style>
+</head>
+<body>
+  <h2>Expense Tracker</h2>
+  <div id="balance">Balance: ₹0</div>
+
+  <input type="text" id="descInput" placeholder="Description">
+  <input type="number" id="amountInput" placeholder="Amount">
+  <button id="addBtn">Add</button>
+
+  <ul id="transactionList"></ul>
+
+  <script src="expencetracker.js"></script>
+</body>
+</html>
