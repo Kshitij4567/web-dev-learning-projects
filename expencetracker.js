@@ -3,7 +3,6 @@ const amountInput = document.getElementById("amountInput");
 const addBtn = document.getElementById("addBtn");
 const transactionList = document.getElementById("transactionList");
 const balanceDiv = document.getElementById("balance");
-
 // Load transactions from localStorage
 window.addEventListener("load", () => {
   const transactions = JSON.parse(localStorage.getItem("transactions")) || [];
